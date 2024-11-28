@@ -7,7 +7,8 @@ const connectDB = require('./config/db');
 
 
 // import routes
-const userRoutes = require('./routes/users');
+const userRoutes = require('./routes/userRoute');
+const adminRoutes = require('./routes/adminRoute');
 
 
 
@@ -28,6 +29,7 @@ connectDB();
 
 // Use routes
 app.use('/api/v1/users', userRoutes);
+app.use('/api/v1/admins',adminRoutes);
 
 
 
